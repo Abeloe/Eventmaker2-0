@@ -41,7 +41,7 @@ namespace Eventmaker2._0.Persistency
                 // Put = Update
                 try
                 {
-                    await client.PostAsJsonAsync("api/Events", eEvent );
+                    await client.PostAsJsonAsync("api/Events", eEvent);
 
 
                 }

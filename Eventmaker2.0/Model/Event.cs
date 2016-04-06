@@ -23,6 +23,11 @@ namespace Eventmaker2._0.Model
             DateTime = dateTime;
         }
 
+        public Event()
+        {
+            
+        }
+
         public override string ToString()
         {
             return $"Id: {Id}, Name: {Name}, Beskrivelse: {Beskrivelse}, Place: {Place}, DateTime: {DateTime}";
