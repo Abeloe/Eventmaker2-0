@@ -17,7 +17,7 @@ namespace Eventmaker2._0.Model
 
         public static EventCatalogSingelton EventCatalog
         {
-            get { return _eventCatalog; }
+            get { return _eventCatalog ?? (_eventCatalog = new EventCatalogSingelton()); }
         }
 
         public ObservableCollection<Event> Events { get; set;}

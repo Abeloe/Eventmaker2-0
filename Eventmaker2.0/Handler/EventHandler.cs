@@ -12,7 +12,7 @@ namespace Eventmaker2._0.Handler
     public class EventHandler
     {
         public EventViewModel EventViewModel { get; set; }
-
+       
         public EventHandler(EventViewModel eventViewModel)
         {
             EventViewModel = eventViewModel;

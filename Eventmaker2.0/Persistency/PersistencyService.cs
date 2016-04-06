@@ -127,7 +127,7 @@ namespace Eventmaker2._0.Persistency
 
                 try
                 {
-                   await client.DeleteAsync("api/events/"+ rEvent.Id);
+                   await client.DeleteAsync("api/events/"+ rEvent.id);
                 }
                 catch (Exception)
                 {

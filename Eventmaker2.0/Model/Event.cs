@@ -8,7 +8,7 @@ namespace Eventmaker2._0.Model
 {
     public class Event
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string Name { get; set; }
         public string Beskrivelse  { get; set; }
         public string Place { get; set; }
@@ -16,7 +16,7 @@ namespace Eventmaker2._0.Model
 
         public Event(int id, string name, string beskrivelse, string place, DateTime dateTime)
         {
-            Id = id;
+            this.id = id;
             Name = name;
             Beskrivelse = beskrivelse;
             Place = place;
@@ -30,7 +30,7 @@ namespace Eventmaker2._0.Model
 
         public override string ToString()
         {
-            return $"Id: {Id}, Name: {Name}, Beskrivelse: {Beskrivelse}, Place: {Place}, DateTime: {DateTime}";
+            return $"id: {id}, Name: {Name}, Beskrivelse: {Beskrivelse}, Place: {Place}, DateTime: {DateTime}";
         }
     }
 
