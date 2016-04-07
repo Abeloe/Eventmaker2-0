@@ -52,10 +52,10 @@ namespace Eventmaker2._0.Model
             var events = await PersistencyService.LoadEventsFromJsonAsync();
             if (events != null)
             {
-                foreach (var event1 in events)
+                foreach (var e in events)
                 {
-                    Events.Add(event1);
-
+                    Events.Add(e);
+                    
                 }
             }
         }

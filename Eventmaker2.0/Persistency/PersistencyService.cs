@@ -42,8 +42,7 @@ namespace Eventmaker2._0.Persistency
                 try
                 {
                     await client.PostAsJsonAsync("api/Events", eEvent);
-
-
+                    
                 }
                 catch (Exception)
                 {
@@ -53,6 +52,7 @@ namespace Eventmaker2._0.Persistency
             }
         }
 
+#region loadevent
         public static async Task<List<Event>> LoadEventsFromJsonAsync()
         {
              HttpClientHandler handler = new HttpClientHandler();
@@ -68,11 +68,11 @@ namespace Eventmaker2._0.Persistency
 
                 try
                 {
-                    var response = client.GetAsync("api/events").Result;
+                    var response = await client.GetAsync("api/events");
 
                     if (response.IsSuccessStatusCode)
                     {
-                        var eventdata = response.Content.ReadAsAsync<IEnumerable<Event>>().Result;
+                        var eventdata = await response.Content.ReadAsAsync<IEnumerable<Event>>();
                             return  eventdata.ToList();
                     }
                 }
@@ -85,7 +85,7 @@ namespace Eventmaker2._0.Persistency
             }
 
         }
-
+#endregion
         public static async void UpdateEvent(Event uEvent)
         {
             HttpClientHandler handler = new HttpClientHandler();
